@@ -1,0 +1,71 @@
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  div{
+height: fit-content;
+
+  }
+  .timr{
+    //align-content:center,
+    position: absolute;
+    top: 55%;
+    left: 48%;
+    font-size: 80px;
+    background-color: peru;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px; 
+    margin-top: 80px;
+  // color: white;
+  }
+  .confrm {
+    margin-left: 400px;
+    margin-right: 200px;
+    margin-top: 100px;
+    border: dashed;
+    height: 500px;
+  }
+  .btnc{
+   // margin-left: 100px;
+   // margin-right: 200px;
+    margin-top: 270px;
+  }
+  .conff{
+    
+    margin-left: 400px;
+    margin-right: 200px;
+    margin-top: 100px;
+    border: dashed;
+    height: 300px;
+  
+}
+.idl{
+  margin-left: 400px;
+    margin-right: 200px;
+    margin-top: 100px;
+    border: hidden;
+    background-color: aliceblue;
+    height: 300px;
+}

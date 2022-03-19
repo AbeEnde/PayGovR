@@ -1,0 +1,44 @@
+{
+  "fields": [
+    {
+      "fieldName": "cik",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique", "minlength", "maxlength", "pattern"],
+      "fieldValidateRulesMinlength": "3",
+      "fieldValidateRulesMaxlength": 20,
+      "fieldValidateRulesPattern": "^[a-zA-Z0-9]*$"
+    },
+    {
+      "fieldName": "ccc",
+      "fieldType": "String",
+      "fieldValidateRules": []
+    },
+    {
+      "fieldName": "paymentAmount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": []
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": []
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String",
+      "fieldValidateRules": []
+    }
+  ],
+  "relationships": [],
+  "service": "serviceClass",
+  "dto": "no",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "name": "Paygove",
+  "changelogDate": "20211231141637"
+}
