@@ -50,37 +50,8 @@ class PagovConfrm extends React.Component {
     
   }
  
-  /* getCookie(name):string {
-    let cookieValue = null;
-    if (document.cookie && document.cookie !== '') {
-        const cookies = document.cookie.split(';');
-        const tokn = cookies[1].split('=')
-        cookieValue = tokn[1]
-      // eslint-disable-next-line no-console
-       console.log(tokn[1]);
-    }
-    return cookieValue;
-} */
-/*  
-getCookie(name) {
-  let cookieValue = null;
-  let cokar;
-  if (document.cookie && document.cookie !== '') {
-      const cookies = document.cookie.split(';');
-      for (let i = 0; i < cookies.length; i++) {
-          const cookie = cookies[i].trim();
-          cokar = cookie
-          // Does this cookie string begin with the name we want?
-          if (cookie.substring(0, name.length + 1) === (name + '=')) {
-              cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-              break;
-          }
-      }
-  }
-  // eslint-disable-next-line no-console
-  console.log(this.userData.paymentAmount);
-  return cookieValue;
-} */
+ 
+
 
  passAmnt(){
   const requestp = "http://localhost:8080/api/amt"; 
