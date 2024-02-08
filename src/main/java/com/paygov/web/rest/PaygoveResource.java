@@ -28,9 +28,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
-import org.springframework.security.web.csrf.CsrfTokenRepository;
+
 import org.springframework.web.bind.annotation.*;
 import tech.jhipster.web.util.HeaderUtil;
 import tech.jhipster.web.util.ResponseUtil;
@@ -59,7 +57,7 @@ public class PaygoveResource {
         this.paygoveRepository = paygoveRepository;
     }
 
-    
+
     @CrossOrigin(origins = "http://localhost:9000")
     @PostMapping("/amt")
     public @ResponseBody String amount(@Valid @RequestBody Paygove amt){
@@ -67,7 +65,7 @@ public class PaygoveResource {
       System.out.println(amt);
 return "am called";
     }
-        
+
     /**
      * {@code POST  /paygoves} : Create a new paygove.
      *
@@ -158,7 +156,7 @@ return "am called";
         );
     }
 
-    
+
     @GetMapping("/redirect")
     public CreateHostedCheckoutResponse getPostWithCustomHeaders() throws IOException, URISyntaxException {
         // create request
@@ -181,7 +179,7 @@ return "am called";
 
             Customer customer = new Customer();
             customer.setBillingAddress(billingAddress);
-            customer.setMerchantCustomerId("1378-1234");
+            customer.setMerchantCustomerId("1131");
 
             Order order = new Order();
             order.setAmountOfMoney(amountOfMoney);
@@ -191,9 +189,8 @@ return "am called";
             body.setHostedCheckoutSpecificInput(hostedCheckoutSpecificInput);
             body.setOrder(order);
 
-            CreateHostedCheckoutResponse response = client.merchant("1378").hostedcheckouts().create(body);
+            CreateHostedCheckoutResponse response = client.merchant("1131").hostedcheckouts().create(body);
             System.out.println(response.getPartialRedirectUrl());
-            System.out.println("i am called");
             return response;
         } finally {
             client.close();
@@ -207,15 +204,15 @@ return "am called";
     String secretApiKey; */
 
     private com.ingenico.connect.gateway.sdk.java.Client getClient() throws URISyntaxException {
-        String apiKeyId = System.getProperty("apiKeyId", "f4d9535aa8d07525");
-        String secretApiKey = System.getProperty("secretApiKey","cQQ5tT8t6xg9aZ+V6GlE/8uoqEanCykGaKB3ZTrLMsY=");
+        String apiKeyId = System.getProperty("apiKeyId", "b3f1e7dae9ba73ae");
+        String secretApiKey = System.getProperty("secretApiKey","oyJ2pXQCMk7/nBFL9Lcn11AsDqB/+8qO6gSFysn4nNI=");
 
         URL propertiesUrl = getClass().getResource("/example-configuration.properties");
         CommunicatorConfiguration configuration = Factory.createConfiguration(propertiesUrl.toURI(), apiKeyId, secretApiKey);
         return Factory.createClient(configuration);
     }
-    
-    
+
+
     /**
      * {@code GET  /paygoves} : get all the paygoves.
      *
